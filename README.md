@@ -101,13 +101,24 @@ Sorts feedback entries by rating in descending order (highest to lowest).
 # STEP 1: PRELOADED FEEDBACKS
 
 feedback_data = {
-'S_No': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    'S_No': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 
-'Name': ['Ravi', 'Meera', 'Sam', 'Anu', 'Raj','Divya', 'Arjun', 'Kiran', 'Leela', 'Nisha'],
+    'Name': ['Ravi', 'Meera', 'Sam', 'Anu', 'Raj',
+             'Divya', 'Arjun', 'Kiran', 'Leela', 'Nisha'],
 
-'Feedback': ['   Very GOOD Service!!!','poor support,        not happy   ','GREAT experience! will come again.','okay okay...','   not    BAD','Excellent care, excellent staff!','good food and good ambience!','Poor response and poor handling of issue','Satisfied. But could be better.','Good support... quick service.'],
+    'Feedback': [
+        '   Very GOOD Service!!!',
+        'poor support,        not happy   ',
+        'GREAT experience! will come again.',
+        'okay     okay...',
+        '   not    BAD',
+        'Excellent care, excellent staff!',
+        'good food and good ambience!',
+        'Poor response and poor handling of issue',
+        'Satisfied. But could be better.',
+        'Good support... quick service.'],
 
-'Rating': [5, 2, 5, 3, 2, 5, 4, 1, 3, 4]
+    'Rating': [5, 2, 5, 3, 2, 5, 4, 1, 3, 4]
 }
 
 
@@ -120,34 +131,34 @@ n = int(input("How many more feedbacks do you want to add? "))
 
 for i in range(n):
 
-print("\nFeedback", i + 1)
+    print("\nFeedback", i + 1)
 
-name = input("Enter Name: ")
-feedback = input("Enter Feedback: ")
-rating = int(input("Enter Rating (1-5): "))
+    name = input("Enter Name: ")
+    feedback = input("Enter Feedback: ")
+    rating = int(input("Enter Rating (1-5): "))
 
-feedback_data['S_No'].append(len(feedback_data['S_No']) + 1)
-feedback_data['Name'].append(name)
-feedback_data['Feedback'].append(feedback)
-feedback_data['Rating'].append(rating)
+    feedback_data['S_No'].append(len(feedback_data['S_No']) + 1)
+    feedback_data['Name'].append(name)
+    feedback_data['Feedback'].append(feedback)
+    feedback_data['Rating'].append(rating)
 print(" ")
 
 # STEP 3: TEXT CLEANING
 
 for i in range(len(feedback_data['Feedback'])):
 
-text = feedback_data['Feedback'][i]
+    text = feedback_data['Feedback'][i]
 
- # Remove punctuation
-   text = text.replace('.', '')
-   text = text.replace(',', '')
-   text = text.replace('!', '')
-   text = text.replace('?', '')
+    # Remove punctuation
+    text = text.replace('.', '')
+    text = text.replace(',', '')
+    text = text.replace('!', '')
+    text = text.replace('?', '')
 
- # Remove extra spaces
+    # Remove extra spaces
     text = ' '.join(text.split())
 
- # Convert to lowercase
+    # Convert to lowercase
     text = text.lower()
 
     feedback_data['Feedback'][i] = text
@@ -157,14 +168,14 @@ text = feedback_data['Feedback'][i]
 
 def count_word_in_feedbacks(word):
 
-count = 0
+    count = 0
 
-for feedback in feedback_data['Feedback']:
+    for feedback in feedback_data['Feedback']:
 
-if word.lower() in feedback.split():
-count += 1
+        if word.lower() in feedback.split():
+            count += 1
 
-return count
+    return count
 
 
 print("\n===== WORD COUNT INSIGHTS =====")
@@ -219,15 +230,15 @@ max_words = 0
 
 for i in range(len(feedback_data['Feedback'])):
 
-feedback = feedback_data['Feedback'][i]
+    feedback = feedback_data['Feedback'][i]
 
-word_count = len(feedback.split())
+    word_count = len(feedback.split())
 
-if word_count > max_words:
+    if word_count > max_words:
 
-max_words = word_count
-longest_feedback = feedback
-longest_name = feedback_data['Name'][i]
+        max_words = word_count
+        longest_feedback = feedback
+        longest_name = feedback_data['Name'][i]
 
 print("Name:", longest_name)
 print("Feedback:", longest_feedback)
@@ -244,12 +255,12 @@ unique_words = []
 
 for feedback in feedback_data['Feedback']:
 
-words = feedback.split()
+    words = feedback.split()
 
-for word in words:
+    for word in words:
 
-if word not in unique_words:
-unique_words.append(word)
+        if word not in unique_words:
+            unique_words.append(word)
 
 print(unique_words)
 print(" ")
@@ -260,21 +271,24 @@ print("\n===== FEEDBACKS SORTED BY RATING =====")
 print(" ")
 
 sorted_feedbacks = sorted(
-zip(feedback_data['Name'],
-   feedback_data['Feedback'],
-   feedback_data['Rating']),
-   key=lambda x: x[2],
-   reverse=True
+    zip(feedback_data['Name'],
+        feedback_data['Feedback'],
+        feedback_data['Rating']),
+    key=lambda x: x[2],
+    reverse=True
 )
 
 for name, feedback, rating in sorted_feedbacks:
 
-print("Name:", name)
-print("Feedback:", feedback)
-print("Rating:", rating)
-print("-------------------------")
+    print("Name:", name)
+    print("Feedback:", feedback)
+    print("Rating:", rating)
+    print("-------------------------")
 
 
 # ==========================================
 # END OF PROJECT
 # ==========================================
+
+
+
