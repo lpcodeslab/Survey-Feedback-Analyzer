@@ -101,24 +101,13 @@ Sorts feedback entries by rating in descending order (highest to lowest).
 # STEP 1: PRELOADED FEEDBACKS
 
 feedback_data = {
-    'S_No': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+'S_No': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 
-    'Name': ['Ravi', 'Meera', 'Sam', 'Anu', 'Raj',
-             'Divya', 'Arjun', 'Kiran', 'Leela', 'Nisha'],
+'Name': ['Ravi', 'Meera', 'Sam', 'Anu', 'Raj','Divya', 'Arjun', 'Kiran', 'Leela', 'Nisha'],
 
-    'Feedback': [
-        '   Very GOOD Service!!!',
-        'poor support,        not happy   ',
-        'GREAT experience! will come again.',
-        'okay     okay...',
-        '   not    BAD',
-        'Excellent care, excellent staff!',
-        'good food and good ambience!',
-        'Poor response and poor handling of issue',
-        'Satisfied. But could be better.',
-        'Good support... quick service.'],
+'Feedback': ['   Very GOOD Service!!!','poor support,        not happy   ','GREAT experience! will come again.','okay okay...','   not    BAD','Excellent care, excellent staff!','good food and good ambience!','Poor response and poor handling of issue','Satisfied. But could be better.','Good support... quick service.'],
 
-    'Rating': [5, 2, 5, 3, 2, 5, 4, 1, 3, 4]
+'Rating': [5, 2, 5, 3, 2, 5, 4, 1, 3, 4]
 }
 
 
