@@ -1,12 +1,9 @@
 # Survey-Feedback-Analyzer
 A Python-based Survey Feedback Analyzer that collects, cleans, and analyzes customer feedback using dictionaries, lists, loops, functions, and string operations. It calculates average ratings, identifies the longest feedback, counts specific words, and extracts unique words.
-Project Overview
-
-The Survey Feedback Analyzer is a Python-based project developed as part of the Python Fundamentals Module End Assignment 4.
 
 This project focuses on collecting and analyzing survey feedback using basic Python programming concepts. It performs text cleaning, word counting, rating analysis, and extracts useful insights from customer feedback.
 
-Objectives
+# Objectives
 
 Store preloaded feedback using a dictionary of lists.
 
@@ -26,7 +23,7 @@ Identify unique words across all feedback entries.
 
 Sort feedbacks based on ratings from highest to lowest.
 
-Technologies Used
+# Technologies Used
 
 Python
 
@@ -42,23 +39,23 @@ String Methods
 
 zip() and sorted()
 
-Project Features
+# Project Features
 
 1. Preloaded Feedbacks
 
-Starts with 10 predefined survey feedback entries.
+   Starts with 10 predefined survey feedback entries.
 
 2. Add More Feedbacks
 
-Allows users to enter additional details:
+   Allows users to enter additional details:
 
-Serial Number (automatically generated)
+            Serial Number (automatically generated)
 
-Name
+            Name
 
-Written Feedback
+            Written Feedback
 
-Rating (1–5)
+            Rating (1–5)
 
 3. Text Cleaning
 
@@ -74,11 +71,11 @@ Converts all feedback into lowercase.
 
 Counts the number of feedback entries containing:
 
-good
+    good
 
-poor
+    poor
 
-excellent
+    excellent
 
 5. Final Summary and Insights
 
