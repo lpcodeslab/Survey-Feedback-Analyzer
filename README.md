@@ -248,7 +248,7 @@ print(" ")
 
 # Find Unique Words
 
-print("\n===== UNIQUE WORDS =====")
+print("\n UNIQUE WORDS")
 print(" ")
 
 unique_words = []
@@ -286,9 +286,6 @@ for name, feedback, rating in sorted_feedbacks:
     print("-------------------------")
 
 
-# ==========================================
-# END OF PROJECT
-# ==========================================
 
 
 
